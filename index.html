@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 4 Capstone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Welcome to the Outdoor Gear Store!</h1>
+    <p>
+      Let the shopping commence!
+    </p>
+    <p id="arraylist"></p>
+    
+    <p>Items to choose from: </p>
+    <hr>
+      <ul id = "list">
+        <li>Umbrella $12.99&nbsp &nbsp &nbsp &nbsp &nbsp<button onclick="addItem('umbrella'); addPrice(12.99);" alert="Your item has been added to cart">Add Item</button></li>
+        <br>
+        <li>Rain Jacket $23.50&nbsp &nbsp &nbsp <button onclick="addItem('jacket'); addPrice(23.50);">Add Item</button></li>
+        <br>
+        <li>Sun hat $10.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <button onclick="addItem('sun hat'); addPrice(10.00);">Add Item</button></li>
+        <br>
+        <li>Sunscreen $4.99 &nbsp &nbsp &nbsp &nbsp&nbsp<button onclick="addItem('sunscreen'); addPrice(4.99);">Add Item</button></li>
+        <br>
+        <li>Backpack $20.00&nbsp &nbsp &nbsp &nbsp &nbsp<button onclick="addItem('backpack'); addPrice(20.0);">Add Item</button></li>
+        <br>
+        <li>Boots $30.00 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<button onclick="addItem('boots'); addPrice(30.0);">Add Item</button></li>
+        <br>
+        <li>Wool Socks $8.99&nbsp &nbsp&nbsp&nbsp &nbsp <button onclick="addItem('socks'); addPrice(8.99);">Add Item</button></li>
+    </ul>
+    <!--<p id="cart">Your shopping cart: </p> -->
+    <hr>
+    <p>Your shopping cart: </p>
+    <p class="item"><script type="text/javascript">document.write(items);</script></p>
+    <p class="price"><script type="text/javascript">document.write(prices);</script></p>
+
+    <button onclick="myFunction();">CHECKOUT</button>
+    <p>Total Order:  <span id="buy"></span></p>
+   
+  
+    
+    
+  <script type="text/javascript">
+    var items = [];
+    var prices = []
+    function addItem(item) {
+      items.push(item);
+      alert("Your item has been added!");
+     
+      document.querySelector(".item").innerHTML = items.join(', ');
+    }
+    function addPrice(price) {
+      prices.push(price);
+      document.querySelector(".price").innerHTML = prices.join(', ');
+    }
+    function getSum(total, num) {
+      return total + num;
+    }
+    function myFunction(item) {
+      document.getElementById("buy").innerHTML = prices.reduce(getSum);
+      
+    }
+    //document.write(var cartarray = []);
+    
+    
+//    var wantedItems = [];
+//    function add(string) {
+//      alert("Item added to cart!");
+//      wantedItems.push(string);
+//      //wantedItems.toString();
+//      //display[string].count++;
+//    }
+//    function checkout() {
+//      alert("Checking you out");
+//      wantedItems
+
+// }
+     </script>
+  
+  
+   
+<!--     var items = ["Umbrella","Rain jacket","Sun hat","Sunscreen","Waterproof shoes","Cargo pants"];
+//      var strings = items.toString();
+//      
+//      var b =  strings.split(",");
+//      //document.getElementById("list").innerHTML = b;
+//      document.write(b);
+    
+     //var new = list.splitText(',');
+     -->
+      
+   
+  
+    
+  </body>
+</html>
